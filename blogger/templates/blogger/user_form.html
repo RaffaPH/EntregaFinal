@@ -1,0 +1,15 @@
+{% extends "./base_paginas.html" %}
+
+{% block title %} editar perfil {% endblock %}
+
+{% block body %}
+
+<a href="{% url 'blogger_profile' user.id %}">Volver a Profile</a>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock %}

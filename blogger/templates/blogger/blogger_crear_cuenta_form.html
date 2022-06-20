@@ -1,0 +1,15 @@
+{% extends "./base_paginas.html" %}
+
+{% block title %} crear cuenta {% endblock %}
+
+{% block body %}
+
+<a href="{% url 'blog_list' %}">Volver al inicio</a>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Crear Cuenta">
+</form>
+
+{% endblock %}

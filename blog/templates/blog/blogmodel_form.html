@@ -1,0 +1,15 @@
+{% extends "./base_paginas.html" %}
+
+{% block title %} nuevo blog {% endblock %}
+
+{% block body %}
+
+<a href="{% url 'blog_list' %}">Volver a Lista</a>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock %}

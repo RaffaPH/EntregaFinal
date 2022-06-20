@@ -1,0 +1,14 @@
+{% extends "./base_paginas.html" %}
+
+{% block title %} confirmar borrado {% endblock %}
+
+{% block body %}
+
+<a href="{% url 'blog_list' %}">Volver a Lista</a>
+<form method="post">{% csrf_token %}
+    <p>¿Está Seguro que quiere borrar "{{ object }}"?</p>
+    {{ form }}
+    <input type="submit" value="Confirmar">
+</form>
+
+{% endblock %}
