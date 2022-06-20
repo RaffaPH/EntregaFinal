@@ -3,8 +3,13 @@
 {% block title %} blog {% endblock %}
 
 {% block body %}
-
-<a href="{% url 'blog_list' %}">Volver a Lista</a>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'blog_list' %}">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Volver a Lista</font></font></a>
+    </div>
+  </nav>
 <div>
     <h1>{{object.titulo}}</h1>
     <h2>{{object.sub_titulo}}</h2>

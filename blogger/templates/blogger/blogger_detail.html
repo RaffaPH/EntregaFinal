@@ -3,9 +3,16 @@
 {% block title %} perfil usuario {% endblock %}
 
 {% block body %}
-
-<a href="{% url 'blog_list' %}">Volver a Lista Blogs</a>
-<a href="{% url 'blogger_edit' user.id %}">Editar Perfil</a>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'blog_list' %}">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Volver a Lista Blogs</font></font></a>
+      <a class="navbar-brand" href="{% url 'blogger_edit' user.id %}">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Editar Perfil</font></font></a>
+    </div>
+  </nav>
 
 <ul>
     <li>Nombre: {{object.first_name}}<li>
@@ -13,8 +20,5 @@
     <li>Correo electronico: {{object.email}} </li>
     <li>Nombre de Usuario: {{object.username}}</li>
 </ul>
-
-<img height="128" src="{{ object.avatar_set.first.image.url }}" />
-
 {% endblock %}
 

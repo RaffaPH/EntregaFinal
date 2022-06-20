@@ -3,8 +3,14 @@
 {% block title %} crear cuenta {% endblock %}
 
 {% block body %}
-
-<a href="{% url 'blog_list' %}">Volver al inicio</a>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'blog_list' %}">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Volver al inicio</font></font></a>
+      
+    </div>
+  </nav>
 
 <form method="post">
     {% csrf_token %}

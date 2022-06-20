@@ -3,8 +3,14 @@
 {% block title %} confirmar borrado {% endblock %}
 
 {% block body %}
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'blog_list' %}">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Volver a Lista</font></font></a>
 
-<a href="{% url 'blog_list' %}">Volver a Lista</a>
+    </div>
+  </nav>
 <form method="post">{% csrf_token %}
     <p>¿Está Seguro que quiere borrar "{{ object }}"?</p>
     {{ form }}

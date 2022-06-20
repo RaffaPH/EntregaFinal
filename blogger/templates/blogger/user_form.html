@@ -3,8 +3,13 @@
 {% block title %} editar perfil {% endblock %}
 
 {% block body %}
-
-<a href="{% url 'blogger_profile' user.id %}">Volver a Profile</a>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'blogger_profile' user.id %}">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Volver a Profile</font></font></a>
+    </div>
+  </nav>
 
 <form method="post">
     {% csrf_token %}

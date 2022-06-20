@@ -5,12 +5,37 @@
 {% block body %}
 
 {% if user.is_authenticated %}
-  <a href="{% url 'blog_logout' %}">Salir</a>
-  <a href="{% url 'blog_create' %}">Nuevo Blog</a>
-  <a href="{% url 'blogger_profile' user.id %}">Perfil {{user.username}}</a>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'blog_logout' %}">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Salir</font></font></a>
+      <a class="navbar-brand" href="{% url 'blog_create' %}">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Nuevo Blog</font></font></a>
+      <a class="navbar-brand" href="{% url 'blogger_profile' user.id %}">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Perfil {{user.username}}</font></font></a>
+    </div>
+  </nav>
+
+
+
+
+
+
 {% else %}
-  <a href="{% url 'blog_login' %}">Entrar</a>
-  <a href="{% url 'blogger_signup' %}">Crear Cuenta</a>
+
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'blog_login' %}">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Entrar</font></font></a>
+    <a class="navbar-brand" href="{% url 'blogger_signup' %}">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Crear Cuenta</font></font></a>
+  </div>
+</nav>
 {% endif %}
 
 
@@ -18,11 +43,24 @@
 {% if object_list %}
     {% for blog in object_list %}
     <li>
-        
-        <a href="{% url 'blog_detail' blog.id %}">{{blog.titulo}}</a>
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""{% url 'blog_detail' blog.id %}"">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">{{blog.titulo}}</font></font></a>
+        </div>
+      </nav>
+        <a href=></a>
         {% if user.is_authenticated %}
-          <a href="{% url 'blog_delete' blog.id %}">Borrar</a>
-          <a href="{% url 'blog_update' blog.id %}">Actualizar</a>
+
+        <nav class="navbar bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'blog_delete' blog.id %}">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Borrar</font></font></a>
+            <a class="navbar-brand" href="{% url 'blog_update' blog.id %}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actualizar</font></font></a>
+          </div>
+        </nav>
         {% endif %}
     </li>
     {% endfor %}
