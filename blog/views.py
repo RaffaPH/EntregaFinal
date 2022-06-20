@@ -66,8 +66,6 @@ class BlogLogout(LogoutView):
     template_name = 'blog/blog_logout.html'
 
     
-class BlogAbout(DetailView):
-
-    model = BlogModel
-    template_name = "blog/blogAbout.html"
+def about(request):
+    return render(request, 'blog/about.html')
 
