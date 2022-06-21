@@ -15,7 +15,8 @@
   </nav>
 
 
-<div class="mb-5">
+<div class="container mb-5">
+  <ul class="pagination justify-content-center">
   <dl class="row">
     <dt class="col-sm-3">Nombre</dt>
     <dd class="col-sm-9">{{object.first_name}}</dd>
@@ -29,6 +30,10 @@
     <dt class="col-sm-3">Nombre de Usuario</dt>
     <dd class="col-sm-9">{{object.username}}</dd>
   </dl>
+  </ul>
 </div>
+
+<img height="128" src="{{ object.avatar_set.first.image.url }}" />
+
 {% endblock %}
 
