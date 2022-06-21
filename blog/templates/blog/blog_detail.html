@@ -10,12 +10,21 @@
             <font style="vertical-align: inherit;">Volver a Lista</font></font></a>
     </div>
   </nav>
-<div>
-    <h1>{{object.titulo}}</h1>
-    <h2>{{object.sub_titulo}}</h2>
-    <p> {{object.cuerpo}} </p>
-    <h3>{{object.fecha}}</h3>
-    <h3>{{object.autor}}</h3>
+  
+  <div class="container mb-5">
+    <ul class="pagination justify-content-center">
+  <div class="card" style="width: 18rem;">
+      <div class="card-body mb-5">
+        <h3 class="card-title">{{object.titulo}}</h5>
+        <h4 class="card-subtitle mb-2 text-muted">{{object.sub_titulo}}</h6>
+        <p class="card-text">{{object.cuerpo}}</p>
+        <p class="card-text">{{object.autor}}</p>
+      </div>
+  </div>
+    </ul>
 </div>
+  </div>
+
+
 
 {% endblock %}

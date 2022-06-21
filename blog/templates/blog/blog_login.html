@@ -4,11 +4,15 @@
 
 {% block body %}
 
+<ul class="pagination justify-content-center">
+
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Iniciar Sesión</button>
+    <button type="submit" class="btn btn-secondary">Iniciar Sesión</button>
 </form>
+
+</ul>
 
 {% endblock %}
 

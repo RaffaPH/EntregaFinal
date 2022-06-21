@@ -45,7 +45,7 @@
     <li>
       <nav class="navbar bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href=""{% url 'blog_detail' blog.id %}"">
+          <a class="navbar-brand" href="{% url 'blog_detail' blog.id %}">
             <font style="vertical-align: inherit;">
               <font style="vertical-align: inherit;">{{blog.titulo}}</font></font></a>
         </div>
@@ -58,14 +58,20 @@
             <a class="navbar-brand" href="{% url 'blog_delete' blog.id %}">
               <font style="vertical-align: inherit;">
                 <font style="vertical-align: inherit;">Borrar</font></font></a>
-            <a class="navbar-brand" href="{% url 'blog_update' blog.id %}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actualizar</font></font></a>
+            <a class="navbar-brand" href="{% url 'blog_update' blog.id %}">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Actualizar</font></font></a>
           </div>
         </nav>
         {% endif %}
     </li>
     {% endfor %}
 {% else %}
-  <h1> No hay blogs</h1>
+<div class="container mb-5">
+<ul class="pagination justify-content-center">
+<p class="h1 mb-5"> No Hay   Blogs</p>
+</ul>
+</div>
 {% endif %}
 
-{% endblock %}
+{% endblock %}  

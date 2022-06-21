@@ -4,10 +4,19 @@
 
 {% block body %}
 
-<h1>Saliste de la App</h1>
+
+<ul class="pagination justify-content-center">
+
+
+<p class="h1 mb-5"> Saliste de la App</p>
+
+</ul>
+
 <nav class="navbar bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'blog_list' %}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ir la lista de blogs</font></font></a>
+      <a class="navbar-brand" href="{% url 'blog_list' %}">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Ir la lista de blogs</font></font></a>
       
     </div>
   </nav>
