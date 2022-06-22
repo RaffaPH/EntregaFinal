@@ -3,6 +3,9 @@
 {% block title %} perfil usuario {% endblock %}
 
 {% block body %}
+
+{% load static %}
+
 <nav class="navbar bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'blog_list' %}">
@@ -33,7 +36,8 @@
   </ul>
 </div>
 
-<img height="128" src="{{ object.avatar_set.first.image.url }}" />
+
+<img height="128" src="{{ object.avatar_set.first.image.url }}" /> 
 
 {% endblock %}
 
