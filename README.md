@@ -1,6 +1,6 @@
 # EntregaFinal Sebastian Herrera (las personas del grupo asignado no pudieron ser contactadas o informaron el abandono del curso)
 
-Ejemplo de Blog con CRUD completo (video demostrativo https://youtu.be/paeNfs_N-vM )
+Ejemplo de Blog con CRUD completo (video demostrativo https://youtu.be/jgnn4rupFPM )
 
 Tener en cuenta que para correr el servidor, debe tener instalado django, boostrap5 en su pc o entorno virtual, luego ejecute los siguientes pasos:
 
