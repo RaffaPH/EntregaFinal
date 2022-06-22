@@ -3,6 +3,9 @@
 {% block title %} editar perfil {% endblock %}
 
 {% block body %}
+
+{% load static %}
+
 <nav class="navbar bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'blogger_profile' user.id %}">
